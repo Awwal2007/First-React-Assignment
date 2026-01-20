@@ -33,8 +33,16 @@ const EmployeeCard = ({name, department, score, active, years, image}) => {
             break;
     }
 
+    let bgColor = "";
+
+    if(active === true){
+        bgColor = "black";
+    }else{
+        bgColor = "lightgray";
+    }
+
   return (
-    <div style={{border: `1px solid ${borderColor}`, padding: "10px", borderRadius: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between", color: "white", minHeight: "380px"}} >
+    <div style={{border: `1px solid ${borderColor}`, backgroundColor: `${bgColor}`,padding: "10px", borderRadius: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between", color: "white", minHeight: "380px"}} >
         <div>
             <h1 style={{color: "white", fontSize: "30px", lineHeight: "40px", fontWeight: "bold"}}>{name}</h1>
             <p style={{color: "gray"}}>{department}</p>
